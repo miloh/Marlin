@@ -130,7 +130,7 @@
 #define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10
 
 // Actual temperature must be close to target for this long before M109 returns success
-#define TEMP_RESIDENCY_TIME 10  // (seconds)
+#define TEMP_RESIDENCY_TIME 1  // (seconds)
 #define TEMP_HYSTERESIS 3       // (degC) range of +/- temperatures considered "close" to the target one
 #define TEMP_WINDOW     1       // (degC) Window around target to start the residency timer x degC early.
 
@@ -158,8 +158,8 @@
 // PID settings:
 // Comment the following line to disable PID and enable bang-bang.
 #define PIDTEMP
-#define BANG_MAX 150 // limits current to nozzle while in bang-bang mode; 255=full current
-#define PID_MAX 150 // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
+#define BANG_MAX 255 // limits current to nozzle while in bang-bang mode; 255=full current (150 for 24v)
+#define PID_MAX 255 // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current (150 for 24v)
 #ifdef PIDTEMP
   //#define PID_DEBUG // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1 // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
@@ -186,9 +186,14 @@
 //    #define  DEFAULT_Kd 440
 
 // Type A Machines Series One
-    #define  DEFAULT_Kp 9.03
-    #define  DEFAULT_Ki 0.48
-    #define  DEFAULT_Kd 42.17
+//    #define  DEFAULT_Kp 9.03
+//    #define  DEFAULT_Ki 0.48
+//    #define  DEFAULT_Kd 42.17
+
+// Type A Machines Beta B16 hearth
+    #define  DEFAULT_Kp 22.32
+    #define  DEFAULT_Ki 0.82
+    #define  DEFAULT_Kd 151.75
 
 #endif // PIDTEMP
 
