@@ -562,6 +562,15 @@
   #ifdef ULTRA_LCD
 
     #ifdef NEWPANEL
+		//encoder rotation values
+      #define encrot0 1
+      #define encrot1 3
+      #define encrot2 2
+      #define encrot3 0
+
+      #define BLEN_A 2
+      #define BLEN_B 1
+      #define BLEN_C 3
       #define LCD_PINS_RS 32 
       #define LCD_PINS_ENABLE 47
       #define LCD_PINS_D4 45
