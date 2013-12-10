@@ -387,7 +387,7 @@
 
 
 // uncomment one of the following lines for RAMPS v1.3 or v1.0, comment both for v1.2 or 1.1
-// #define RAMPS_V_1_3
+#define RAMPS_V_1_3
 // #define RAMPS_V_1_0
 
 
@@ -444,25 +444,25 @@
     #define X_MIN_PIN           3
     #define X_MAX_PIN           2
 
-    #define Y_STEP_PIN         60
-    #define Y_DIR_PIN          61
-    #define Y_ENABLE_PIN       56
+    #define Y_STEP_PIN         46
+    #define Y_DIR_PIN          48
+    #define Y_ENABLE_PIN       62
     #define Y_MIN_PIN          14
     #define Y_MAX_PIN          15
 
-    #define Z_STEP_PIN         46
-    #define Z_DIR_PIN          48
-    #define Z_ENABLE_PIN       62
+    #define Z_STEP_PIN         60
+    #define Z_DIR_PIN          61
+    #define Z_ENABLE_PIN       56
     #define Z_MIN_PIN          18
     #define Z_MAX_PIN          19
 
-    #define Y2_STEP_PIN        36
-    #define Y2_DIR_PIN         34
-    #define Y2_ENABLE_PIN      30
+    #define Y2_STEP_PIN        -1
+    #define Y2_DIR_PIN         -1
+    #define Y2_ENABLE_PIN      -1
 
-    #define Z2_STEP_PIN        36
-    #define Z2_DIR_PIN         34
-    #define Z2_ENABLE_PIN      30
+    #define Z2_STEP_PIN        -1
+    #define Z2_DIR_PIN         -1
+    #define Z2_ENABLE_PIN      -1
 
     #define E0_STEP_PIN        26
     #define E0_DIR_PIN         28
@@ -480,7 +480,7 @@
   #if MOTHERBOARD == 33 || MOTHERBOARD == 35 || MOTHERBOARD == 67
     #define FAN_PIN            9 // (Sprinter config)
   #else
-    #define FAN_PIN            4 // IO pin. Buffer needed
+    #define FAN_PIN            -1 // IO pin. Buffer needed
   #endif
 
   #if MOTHERBOARD == 77
@@ -494,7 +494,7 @@
   #define PS_ON_PIN          12
 
   #if defined(REPRAP_DISCOUNT_SMART_CONTROLLER) || defined(G3D_PANEL)
-    #define KILL_PIN           41
+    #define KILL_PIN           -1
   #else
     #define KILL_PIN           -1
   #endif
@@ -508,7 +508,7 @@
   #if MOTHERBOARD == 33 || MOTHERBOARD == 67
     #define HEATER_1_PIN       -1
   #else
-    #define HEATER_1_PIN       9    // EXTRUDER 2 (FAN On Sprinter)
+    #define HEATER_1_PIN       10    // EXTRUDER 2 (FAN On Sprinter)
   #endif
 
   #define HEATER_2_PIN       -1 
@@ -609,7 +609,7 @@
         #endif
 
         #ifdef G3D_PANEL
-          #define SDCARDDETECT 49
+          #define SDCARDDETECT 31
         #else
           #define SDCARDDETECT -1  // Ramps does not use this port
         #endif
