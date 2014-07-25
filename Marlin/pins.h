@@ -1567,6 +1567,7 @@
 
 #define PS_ON_PIN          45
 #define KILL_PIN           46
+#define PANEL_SWITCHLIGHT  41
 
 #if (TEMP_SENSOR_0==0)
  #define TEMP_0_PIN         -1
@@ -1627,7 +1628,7 @@
 #define LCD_PINS_ENABLE    42
 #define LCD_PINS_D4        18
 #define LCD_PINS_D5        38
-#define LCD_PINS_D6        41
+//#define LCD_PINS_D6        41 Repurposed for the PANEL_SWITCHLIGHT on the Type A Machines Series 1 2014 Fall Production revision
 #define LCD_PINS_D7        40
 #define BTN_EN1            11
 #define BTN_EN2            12
