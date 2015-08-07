@@ -678,7 +678,7 @@
   #endif
 
   #if MB(RAMPS_13_EFF)
-    #define HEATER_0_PIN       8
+    #define HEATER_0_PIN       10    // Edit to keep wiring note autofan on 8
   #else
     #define HEATER_0_PIN       10   // EXTRUDER 1
   #endif
