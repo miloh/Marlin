@@ -482,13 +482,13 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {75*60, 75*60, 6*60, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {75*60, 75*60, 10*60, 0}  // set the homing speeds (mm/min)
 
 // default settings
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1007.87, 212}  // steps per stock TAM S1:2013 RevA
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 160}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_FEEDRATE          {300, 300, 15, 45}    // (mm/sec)
+#define DEFAULT_MAX_ACCELERATION      {2800,2800,400,400}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          900    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  2500   // X, Y, Z and E max acceleration in mm/s^2 for retracts
@@ -500,9 +500,9 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // #define EXTRUDER_OFFSET_Y {0.0, 5.00}  // (in mm) for each extruder, offset of the hotend on the Y axis
 
 // The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK                20.0    // (mm/sec)
+#define DEFAULT_XYJERK                15.0    // (mm/sec)
 #define DEFAULT_ZJERK                 0.4     // (mm/sec)
-#define DEFAULT_EJERK                 5.0    // (mm/sec)
+#define DEFAULT_EJERK                 4.0    // (mm/sec)
 
 //===========================================================================
 //=============================Additional Features===========================
