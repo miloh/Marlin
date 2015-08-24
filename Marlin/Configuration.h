@@ -486,7 +486,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1007.87, 212}  // steps per stock TAM S1:2013 RevA
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1007.87, 212}  // steps per stock TAM S1:2013 RevA
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1600, 212}  // steps per stock TAM S1:2013 RevB with the 4mm Z leadscrew
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 15, 45}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {2800,2800,400,400}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
