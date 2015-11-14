@@ -482,12 +482,12 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {75*60, 75*60, 10*60, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {75*60, 75*60, 20*60, 0}  // set the homing speeds (mm/min)
 
 // default settings
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1007.87, 212}  // steps per stock TAM S1:2013 RevA
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1007.87, 212}  // steps per stock TAM S1:2013 RevB with the 4mm Z leadscrew
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1007.87/2, 212}  // stepsper TAM S1:X-2013 RevB with the 6mm Z leadscrew
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 25, 45}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {2800,2800,400,400}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
