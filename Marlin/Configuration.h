@@ -255,8 +255,8 @@ your extruder heater takes 2 minutes to hit the target on heating.
 // uncomment the 2 defines below:
 
 // Parameters for all extruder heaters
-#define THERMAL_RUNAWAY_PROTECTION_PERIOD 40 //in seconds
-#define THERMAL_RUNAWAY_PROTECTION_HYSTERESIS 4 // in degree Celsius
+//#define THERMAL_RUNAWAY_PROTECTION_PERIOD 40 //in seconds
+//#define THERMAL_RUNAWAY_PROTECTION_HYSTERESIS 4 // in degree Celsius
 
 // If you want to enable this feature for your bed heater,
 // uncomment the 2 defines below:
@@ -345,7 +345,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define X_MIN_POS 0
 #define Y_MAX_POS 230
 #define Y_MIN_POS 0
-#define Z_MAX_POS 230
+#define Z_MAX_POS 530
 #define Z_MIN_POS 0
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
@@ -487,7 +487,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // default settings
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1007.87, 212}  // steps per stock TAM S1:2013 RevA
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,1600, 212}  // steps per stock TAM S1:2013 RevB with the 4mm Z leadscrew
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {75.06,150.13,800, 212}  // steps per stock TAM S1:2013 RevB with the 4mm Z leadscrew
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 15, 45}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {2800,2800,400,400}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
